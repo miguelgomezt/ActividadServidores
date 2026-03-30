@@ -55,7 +55,7 @@ def create_item(item: Item):
     cursor.execute(
         "INSERT INTO items (name, price, created_at) VALUES (?, ?, ?)",
         (item.name, item.price, ahora)
-    )docker ps
+    )
     conexion.commit()
     return {"id": cursor.lastrowid, "name": item.name, "price": item.price, "created_at": ahora}
    
